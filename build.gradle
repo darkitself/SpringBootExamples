@@ -15,6 +15,9 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    annotationProcessor "org.projectlombok:lombok",
+            "org.springframework.boot:spring-boot-configuration-processor"
 }
 
 tasks.named('test') {
