@@ -2,17 +2,17 @@ package com.example.springbootexamples.beans.market;
 
 import com.example.springbootexamples.beans.car.Car;
 import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
-@FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class OnlineMarket {
+    @Autowired
     List<Car> availableCars;
 
     @PostConstruct
